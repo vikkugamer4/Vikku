@@ -168,7 +168,7 @@ def process_attack_details(message):
             else:
                 # Record and log the attack
                 log_command(user_id, target, port, time)
-                full_command = f"./tagdi {target} {port} {time} 1200"
+                full_command = f"./smokey {target} {port} {time} 1200"
                 username = message.chat.username or "No username"
                 end_time = datetime.datetime.now() + datetime.timedelta(seconds=time)
                 active_attacks.append((end_time, message.chat.id))
